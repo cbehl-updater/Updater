@@ -1,0 +1,27 @@
+{
+  "appId": "example-app",
+  "version": "1.0.0",
+  "releasedAt": "2026-09-04T00:00:00Z",
+  "minimumInstalledVersion": null,
+  "stackVersion": 1,
+  "requiresComposeChange": true,
+  "rollbackSupported": true,
+  "changes": {
+    "features": [
+      "Initiale Beispielversion."
+    ],
+    "bugfixes": []
+  },
+  "images": {
+    "frontend": "example/frontend:1.0.0",
+    "api": "example/api:1.0.0"
+  },
+  "compose": {
+    "strategy": "replace",
+    "file": "docker-compose.yml"
+  },
+  "migration": {
+    "required": false,
+    "command": null
+  }
+}

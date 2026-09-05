@@ -1,0 +1,33 @@
+{
+  "appId": "example-app",
+  "version": "1.2.0",
+  "releasedAt": "2026-09-05T00:00:00Z",
+  "minimumInstalledVersion": null,
+  "stackVersion": 1,
+  "requiresComposeChange": true,
+  "rollbackSupported": true,
+  "changes": {
+    "features": [
+      "[Allgemein]: Changes"
+    ],
+    "bugfixes": []
+  },
+  "images": {},
+  "compose": {
+    "strategy": "replace",
+    "file": "docker-compose.yml",
+    "detectedChanges": {
+      "initialCompose": true,
+      "addedServices": [],
+      "removedServices": [],
+      "addedVolumes": [],
+      "removedVolumes": [],
+      "addedEnvironment": {},
+      "versionOnlyChange": false
+    }
+  },
+  "migration": {
+    "required": false,
+    "command": null
+  }
+}
