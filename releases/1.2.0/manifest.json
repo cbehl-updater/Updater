@@ -12,7 +12,12 @@
     ],
     "bugfixes": []
   },
-  "images": {},
+  "images": {
+    "proxy": "ghcr.io/cbehl-updater/example-proxy:1.0.0",
+    "frontend": "ghcr.io/cbehl-updater/example-frontend:1.0.0",
+    "api": "ghcr.io/cbehl-updater/example-api:1.0.0",
+    "worker": "ghcr.io/cbehl-updater/example-worker:1.4.0"
+  },
   "compose": {
     "strategy": "replace",
     "file": "docker-compose.yml",

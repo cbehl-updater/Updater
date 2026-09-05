@@ -13,8 +13,8 @@
     "bugfixes": []
   },
   "images": {
-    "frontend": "example/frontend:1.0.0",
-    "api": "example/api:1.0.0"
+    "frontend": "ghcr.io/cbehl-updater/example-frontend:1.0.0",
+    "api": "ghcr.io/cbehl-updater/example-api:1.0.0"
   },
   "compose": {
     "strategy": "replace",

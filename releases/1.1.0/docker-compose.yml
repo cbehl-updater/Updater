@@ -1,15 +1,11 @@
 services:
   proxy:
-    build:
-      context: ./proxy
-    image: example/proxy:1.0.0
+    image: ghcr.io/cbehl-updater/example-proxy:1.0.0
     ports:
       - "6562:80"
 
   frontend:
-    build:
-      context: ./frontend
-    image: example/frontend:1.0.0
+    image: ghcr.io/cbehl-updater/example-frontend:1.0.0
     ports:
       - "3000:80"
     depends_on:
@@ -17,9 +13,7 @@ services:
         condition: service_healthy
 
   api:
-    build:
-      context: ./api
-    image: example/api:1.0.0
+    image: ghcr.io/cbehl-updater/example-api:1.0.0
     environment:
       DATABASE_URL: "postgresql://app:app@db:5432/app"
       HTTP_PORT: "3000"
@@ -35,9 +29,7 @@ services:
       start_period: 10s
 
   worker:
-    build:
-      context: ./worker
-    image: example/worker:1.4.0
+    image: ghcr.io/cbehl-updater/example-worker:1.4.0
     environment:
       DATABASE_URL: "postgresql://app:app@db:5432/app"
     depends_on:
@@ -52,7 +44,6 @@ services:
       POSTGRES_PASSWORD: app
     volumes:
       - db-data:/var/lib/postgresql/data
-      - ./db/init.sql:/docker-entrypoint-initdb.d/001-init.sql:ro
     healthcheck:
       test: ["CMD-SHELL", "pg_isready -U app -d app"]
       interval: 10s
